@@ -25,4 +25,8 @@ export class Service {
     return this.http.post(`${environment.API_URL}/${endpoint}/${id}`, jogador);
   }
 
+  delele(endpoint: string, id: string){
+    return this.http.delete(`${environment.API_URL}/${endpoint}/${id}`);
+  }
+
 }

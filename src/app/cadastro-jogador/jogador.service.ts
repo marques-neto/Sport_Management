@@ -24,4 +24,9 @@ export class JogadorService {
   put(endPoint: string, id: string, jogador: object){
     this.service.put(endPoint,id, jogador);
   }
+
+  delete(endPoint: string, id: string){
+    this.service.delele(endPoint, id);
+  }
+
 }
