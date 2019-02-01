@@ -1,0 +1,21 @@
+{
+  "times": [
+    {
+      "id": 1,
+      "nome": "barcelona"
+    },
+    {
+      "id": 2,
+      "nome": "real madrid"
+    },
+    {
+      "id": 3,
+      "nome": "juventus"
+    },
+    {
+      "id": 4,
+      "nome": "paris"
+    }
+   
+  ]
+}
