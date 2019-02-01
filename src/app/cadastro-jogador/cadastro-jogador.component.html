@@ -1,17 +1,27 @@
 <div class="container">
   <div class="jumbotron">
 
-    <div>
+    <div class="form-model">
 
-      <form action="">
+      <form action="" [formGroup]="jogadorForm">
 
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+        <input placeholder="Nome" type="text" formControlName="nome">
+        <input placeholder="Data de Nascimento" type="text" formControlName="dataNascimento">
+        <input placeholder="Nome da Mãe" type="text" formControlName="nomeDaMae">
+        <input placeholder="Nome do Pai" type="text" formControlName="nomeDoPai">
+        <input placeholder="RG" type="text" formControlName="rg">
+        <input placeholder="Time" type="text" formControlName="time">
+        <input placeholder="Endereço" type="text" formControlName="endereco">
+        <input placeholder="Observação" type="text" formControlName="observacao">
+        <button type="button" (click)="cadastraJogador()">Cadastrar</button>
       </form>
+    </div>
+
+    <div>
+      <div>
+        {{jogador | json}}
+      </div>
+      <button (click)="consultaJogador()">Consultar</button>
     </div>
   </div>
 </div>

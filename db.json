@@ -1,0 +1,26 @@
+{
+  "jogadores": [
+    {
+      "id": 1,
+      "nome": "João",
+      "dataNascimento": "default",
+      "nomeDaMae": "default",
+      "nomeDoPai": "default",
+      "rg": "default",
+      "time": "default",
+      "endereco": "default",
+      "observacao": "default"
+    },
+    {
+      "nome": "Arthur Lima Oliveira",
+      "dataNascimento": "34345454",
+      "nomeDaMae": "Arthur",
+      "nomeDoPai": "Oliveira",
+      "rg": "345354",
+      "time": "tthth",
+      "endereco": "Rua Maurílio Silva Santos",
+      "observacao": "",
+      "id": 2
+    }
+  ]
+}

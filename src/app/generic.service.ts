@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { Observable } from 'rxjs';
 
 
 @Injectable()
@@ -9,23 +10,23 @@ export class Service {
   constructor(private http: HttpClient) { }
 
 
-  getAll(endpoint: string){
+  getAll(endpoint: string): Observable<any>{
     return this.http.get(`${environment.API_URL}/${endpoint}`);
   }
 
-  getById(endpoint: string, id: string){
+  getById(endpoint: string, id: string): Observable<any>{
     return this.http.get(`${environment.API_URL}/${endpoint}/${id}`);
   }
 
-  post(endpoint: string, jogador: object){
+  post(endpoint: string, jogador: object): Observable<any>{
     return this.http.post(`${environment.API_URL}/${endpoint}`, jogador);
   }
 
-  put(endpoint: string, id: string, jogador: object){
+  put(endpoint: string, id: string, jogador: object) : Observable<any>{
     return this.http.post(`${environment.API_URL}/${endpoint}/${id}`, jogador);
   }
 
-  delele(endpoint: string, id: string){
+  delele(endpoint: string, id: string) : Observable<any>{
     return this.http.delete(`${environment.API_URL}/${endpoint}/${id}`);
   }
 
