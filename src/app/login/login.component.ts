@@ -1,7 +1,7 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 
 
 @Component({
@@ -12,8 +12,9 @@ import { Route } from '@angular/router';
 export class LoginComponent implements OnInit {
   login : FormGroup;
   alert: string;
+  visualAlert: boolean  = false;
 
-  constructor(private auth: AuthService, private form: FormBuilder, private rout: Route) { }
+  constructor(private auth: AuthService, private form: FormBuilder, private route: Router) { }
 
   ngOnInit() {
     this.login = this.form.group({
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
           (res)=>{   // resposta booleana definida no auth service método login 
             if(res){
               console.log('Login is Success!!')
-              this.route.navigate(['home'])    
+              this.route.navigate(['login'])    
             }
             else{
               this.showMessage('Usuário ou Senha Inválidos!')
@@ -44,10 +45,13 @@ export class LoginComponent implements OnInit {
      * @param message 
      */
     showMessage(alert){
-      this. alert= alert;
-      
-     
-  }
+      this.alert = alert;
+      this.visualAlert = !this.visualAlert
+      setTimeout(() => {
+         this.visualAlert = !this.visualAlert
+      }, 5000);
+    }
+  
   
 
 }
