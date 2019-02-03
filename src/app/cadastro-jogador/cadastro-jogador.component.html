@@ -6,9 +6,9 @@
       <form action="" [formGroup]="jogadorForm">
 
         <input placeholder="Nome" type="text" formControlName="nome">
-        <input placeholder="Data de Nascimento" type="text" formControlName="dataNascimento">
-        <input placeholder="Nome da Mãe" type="text" formControlName="nomeDaMae">
-        <input placeholder="Nome do Pai" type="text" formControlName="nomeDoPai">
+        <input placeholder="Data de Nascimento" type="text" formControlName="nascimento">
+        <input placeholder="Nome da Mãe" type="text" formControlName="mae">
+        <input placeholder="Nome do Pai" type="text" formControlName="pai">
         <input placeholder="RG" type="text" formControlName="rg">
         <input placeholder="Time" type="text" formControlName="time">
         <input placeholder="Endereço" type="text" formControlName="endereco">
@@ -21,7 +21,11 @@
       <div>
         {{jogador | json}}
       </div>
-      <button (click)="consultaJogador()">Consultar</button>
+
+      <form>
+        <input id="numero" name="numero" type="number" [(ngModel)]="id" novalidate placeholder="Digite o id:">
+        <button type="button" (click)="consultaJogador()">Consultar</button>
+      </form>
     </div>
   </div>
 </div>

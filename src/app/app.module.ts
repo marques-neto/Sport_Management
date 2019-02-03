@@ -7,11 +7,13 @@ import { CadastroJogadorComponent } from './cadastro-jogador/cadastro-jogador.co
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Service } from './generic.service';
+import { ListaJogadorComponent } from './lista-jogador/lista-jogador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroJogadorComponent
+    CadastroJogadorComponent,
+    ListaJogadorComponent
   ],
   imports: [
     BrowserModule,

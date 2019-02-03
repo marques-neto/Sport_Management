@@ -11,15 +11,16 @@ export class CadastroJogadorComponent implements OnInit {
 
   jogadorForm: FormGroup
   jogador: any
+  id:any 
 
   constructor(private fb: FormBuilder,
      private service: JogadorService) { 
 
     this.jogadorForm = this.fb.group({
       nome: this.fb.control(''),
-      dataNascimento: this.fb.control(''),
-      nomeDaMae: this.fb.control(''),
-      nomeDoPai: this.fb.control(''),
+      nascimento: this.fb.control(''),
+      mae: this.fb.control(''),
+      pai: this.fb.control(''),
       rg: this.fb.control(''),
       time: this.fb.control(''),
       endereco: this.fb.control(''),
@@ -41,7 +42,10 @@ cadastraJogador(){
 
 
 consultaJogador(){
-  this.service.getById('jogadores', '1').subscribe(res => this.jogador = res)
+  if(this.id){
+
+    this.service.getById('jogadores', this.id).subscribe(res => this.jogador = res)
+  }
 }
 
 }
