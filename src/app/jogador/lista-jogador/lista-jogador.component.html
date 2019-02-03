@@ -1,3 +1,26 @@
-<p>
-  lista-jogador works!
-</p>
+<div>
+
+  <div class="jumbotron">
+
+      <div class="row">
+          <div class="col-12">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action" id="list-players" data-toggle="list" href="#" role="tab" *ngFor="let player of listaJogadores" >
+                <div class="inform">
+                  <div>
+                    <p>{{player.nome}}</p>
+                  </div>
+                  <div>
+                    <p>RG: {{player.rg}}</p>
+                  </div>
+                  <div>
+                    <p>Obs: {{player.observacao}}</p>
+                  </div>
+              </div>
+              </a>
+              
+            </div>
+          </div>
+
+  </div>
+</div>

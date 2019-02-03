@@ -4,15 +4,40 @@
     <div class="form-model">
 
       <form action="" [formGroup]="jogadorForm">
+        <div class="form-control">
+          
+          <input placeholder="Nome" type="text" formControlName="nome">
+        </div>
 
-        <input placeholder="Nome" type="text" formControlName="nome">
-        <input placeholder="Data de Nascimento" type="text" formControlName="nascimento">
-        <input placeholder="Nome da Mãe" type="text" formControlName="mae">
-        <input placeholder="Nome do Pai" type="text" formControlName="pai">
-        <input placeholder="RG" type="text" formControlName="rg">
-        <input placeholder="Time" type="text" formControlName="time">
-        <input placeholder="Endereço" type="text" formControlName="endereco">
-        <input placeholder="Observação" type="text" formControlName="observacao">
+        <div class="form-control">
+          <input placeholder="Data de Nascimento" type="text" formControlName="nascimento">
+
+        </div>
+        
+        <div class="form-control">
+          <input placeholder="Nome da Mãe" type="text" formControlName="mae">
+
+        </div>
+        <div class="form-control">
+
+          <input placeholder="Nome do Pai" type="text" formControlName="pai">
+        </div>
+        <div class="form-control">
+          
+          <input placeholder="RG" type="text" formControlName="rg">
+        </div>
+        <div class="form-control">
+          
+          <input placeholder="Time" type="text" formControlName="time">
+        </div>
+        <div class="form-control">
+
+          <input placeholder="Endereço" type="text" formControlName="endereco">
+        </div>
+        <div class="form-control">
+
+          <input placeholder="Observação" type="text" formControlName="observacao">
+        </div>
         <button type="button" (click)="cadastraJogador()">Cadastrar</button>
       </form>
     </div>
@@ -27,5 +52,7 @@
         <button type="button" (click)="consultaJogador()">Consultar</button>
       </form>
     </div>
+
+    <app-lista-jogador></app-lista-jogador>
   </div>
 </div>

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CadastroJogadorComponent } from './cadastro-jogador/cadastro-jogador.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Service } from './generic.service';
-import { ListaJogadorComponent } from './lista-jogador/lista-jogador.component';
+import { CadastroJogadorComponent } from './jogador/cadastro-jogador/cadastro-jogador.component';
+import { ListaJogadorComponent } from './jogador/lista-jogador/lista-jogador.component';
+
 
 @NgModule({
   declarations: [
