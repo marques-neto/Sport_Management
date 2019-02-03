@@ -1,4 +1,4 @@
-import { JogadorService } from './jogador.service';
+import { JogadorService } from '../service/jogador.service';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms'
 @Component({
@@ -34,7 +34,7 @@ export class CadastroJogadorComponent implements OnInit {
 cadastraJogador(){
 
   let jogador = this.jogadorForm.getRawValue()
-  this.service.cadastra('jogadores', jogador).subscribe(
+  this.service.cadastra(jogador).subscribe(
     response => console.log(response)
     ,error => console.log(error)
   );  
@@ -44,7 +44,7 @@ cadastraJogador(){
 consultaJogador(){
   if(this.id){
 
-    this.service.getById('jogadores', this.id).subscribe(res => this.jogador = res)
+    this.service.getById(this.id).subscribe(res => this.jogador = res)
   }
 }
 
