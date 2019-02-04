@@ -1,7 +1,7 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,10 +25,10 @@ export class LoginComponent implements OnInit {
     submit(){
       if(this.login.valid){
         this.auth.login(this.login.getRawValue()).toPromise().then(
-          (res)=>{   // resposta booleana definida no auth service método login 
+          (res)=>{ 
             if(res){
               console.log('Login is Success!!')
-              this.route.navigate(['login'])    
+              this.route.navigate(['home'])    
             }
             else{
               this.showMessage('Usuário ou Senha Inválidos!')
@@ -36,14 +36,11 @@ export class LoginComponent implements OnInit {
           }
         )
       }else{
-        this.showMessage('Preencha os campos corretamente!')
+        this.showMessage('Preencha os campos')
       }
     }
   
-    /**
-     * Método para mostrar o alert na tela
-     * @param message 
-     */
+    
     showMessage(alert){
       this.alert = alert;
       this.visualAlert = !this.visualAlert
