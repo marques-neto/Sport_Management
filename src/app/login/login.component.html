@@ -1,25 +1,19 @@
 <div class="flex">
 
-  <div class="jumbotron">
+  <div class="login-box">
 
     <form [formGroup]="loginForm" (ngSubmit)="submit()" class="formGroup">
-
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/TinderLogo-2017.svg/2000px-TinderLogo-2017.svg.png"
-        class="mx-auto d-block" alt="logo-tinder">
-
       <div class="form-group">
         <input formControlName="email" type="text" class="form-control" placeholder="Email">
       </div>
 
-      <div class="form-group">
+      <div class="password-box">
         <input formControlName="password" type="password" class="form-control" placeholder="Senha">
       </div>
 
       <button type="submit" class="btn btn-block btn-info">Login</button>
 
-      <p class="text-center mt-3"> 
-          <a [routerLink]="['/cadastro']">Cadastre-se</a> 
-      </p>
+      
         
 
     </form>
