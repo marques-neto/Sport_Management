@@ -8,11 +8,6 @@
 }
 .jumbotron{
     width: 400px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 1px 1px 14px 1px #d0d0d0;
-}
-img{
-    max-width: 250px;
-    padding: 15px;
+    background-color: blue;
+    border-radius: 15px
 }
