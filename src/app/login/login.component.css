@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 }
-.jumbotron{
+.login-box{
     width: 400px;
     background-color: blue;
     border-radius: 15px
