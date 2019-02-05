@@ -30,7 +30,7 @@ export class RequestService {
     return this.http.post(`${API_URL}/${endpoint}/${id}`, jogador);
   }
   delete(endpoint: string, id: string): Observable<any>{
-    return this.http.delete(`${API_URL}${endpoint}/${id}`)
+    return this.http.delete(`${API_URL}/${endpoint}/${id}`)
   }
 
 }

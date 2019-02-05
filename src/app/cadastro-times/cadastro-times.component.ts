@@ -8,17 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-times.component.css']
 })
 export class CadastroTimesComponent implements OnInit {
-  time : any
+  time: any = { name: '' };
 
   constructor(private request : RequestService) { }
 
   ngOnInit() {
   }
+
   cadastrarTime(){
 
-    this.request.post(TIME,this.time).subscribe(data => {
-
-    })
+    this.request.post(TIME,this.time
+    ).subscribe(data => {})
+    
+    alert('Salvo com sucesso !')
   }
 
 

@@ -1,6 +1,7 @@
 import { RequestService } from './../services/request.service';
 import { Component, OnInit } from '@angular/core';
-import{Observable} from 'rxjs';
+import{ Observable } from 'rxjs';
+import{ map } from 'rxjs/operators';
 import {Team} from '../models/team';
 import {TIME} from '../../environments/endpoints';
 
@@ -11,11 +12,15 @@ import {TIME} from '../../environments/endpoints';
 })
 export class ListagemTimesComponent implements OnInit {
   times : Array<any>
+  userFilter: any = {name: ''}
 
   constructor(private request : RequestService) { }
 
   ngOnInit() {
+    this.getTimes()
+  }
 
+  getTimes(){
     this.request.getAll(TIME).subscribe(data =>{
       this.times= data
     })
@@ -25,4 +30,14 @@ export class ListagemTimesComponent implements OnInit {
     
   }
 
+  deleteTime(id){
+    console.log(id)
+    this.request.delete(TIME,JSON.stringify(id)).toPromise().then(
+      ()=>{
+        this.getTimes()
+      }
+    )
+  }
+
+    
 }

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListagemTimesComponent } from './listagem-times/listagem-times.component';
 import { CadastroTimesComponent } from './cadastro-times/cadastro-times.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 
 
 @NgModule({
@@ -20,7 +21,9 @@ import { CadastroTimesComponent } from './cadastro-times/cadastro-times.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FilterPipeModule
+    
     
   ],
   providers: [HttpClient],

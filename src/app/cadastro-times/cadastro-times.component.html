@@ -1,8 +1,18 @@
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-   
+<div class="container">
+  <div class="input-group mb-3">
+
+    <div class="input-group mb-3">
+      <input [(ngModel)]="time.name"  type="text" class="form-control" placeholder="Time..." aria-label="Recipient's username" aria-describedby="button-addon2">
+    </div>
+    
   </div>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="time">
- 
 </div>
-<button (click)="cadastrarTime()" type="button" class="btn btn-danger" routerLink="/cadastrar-time">Cadastrar Time</button>
+
+<div style="justify-content: center; align-items: center; display: flex">
+    <div style="margin-right: 1%">
+      <button style="background-color: green; border: none" type="button" class="btn btn-danger"  (click)="cadastrarTime()">Salvar</button>
+    </div>
+    <div style="margin-left: 1%">
+      <button style="background-color: black; border: none" type="button" class="btn btn-danger" routerLink="/listar-time">Voltar</button>
+    </div>
+  </div>
