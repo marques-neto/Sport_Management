@@ -10,17 +10,10 @@
       <div class="password-box">
         <input formControlName="password" type="password" class="form-control" placeholder="Senha">
       </div>
-
-      <button type="submit" class="btn btn-block btn-info">Login</button>
+      <button type="submit" class="btn" (click)= "LogOn()">Login</button>
 
     </form>
 
   </div>
-
-
-  <div class="alert" *ngIf="viewAlert">
-    {{message}}
-  </div>
-
 
 </div>

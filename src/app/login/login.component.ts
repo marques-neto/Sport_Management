@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.login = this.form.group({
-      email: ['', Validators.compose([Validators.required, Validators.email])],
+      email: ['', Validators.compose([Validators.required])],
       pass: ['', Validators.compose([Validators.required])]
     })}
 
@@ -48,7 +48,9 @@ export class LoginComponent implements OnInit {
          this.visualAlert = !this.visualAlert
       }, 5000);
     }
-  
+  LogOn(){
+  this.route.navigate(['home']);
+  }
   
 
 }
