@@ -43,6 +43,17 @@
       "endereco": "Rua Maurílio Silva Santos",
       "observacao": "Qualqurer",
       "id": 4
+    },
+    {
+      "nome": "Amancio",
+      "nascimento": "2018-10-09",
+      "mae": "MAINHA DA SILVA",
+      "pai": "PAINHO DA SILVA",
+      "rg": "233232323",
+      "time": "2",
+      "endereco": "RUA DO BECO",
+      "observacao": "oBS",
+      "id": 5
     }
   ],
   "times": [

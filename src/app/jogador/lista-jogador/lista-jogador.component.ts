@@ -1,5 +1,5 @@
 import { JogadorService } from '../service/jogador.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista-jogador',
@@ -11,6 +11,8 @@ export class ListaJogadorComponent implements OnInit {
 
 
   listaJogadores=[]
+  userFilter : any ={ nome:'' }
+  jogadorSelecionado: any
 
   constructor(private service: JogadorService) { }
 
@@ -26,4 +28,7 @@ export class ListaJogadorComponent implements OnInit {
       }, error => console.log(error))
   }
 
+  consulta(index){
+    this.jogadorSelecionado = this.listaJogadores[index]
+  }
 }
