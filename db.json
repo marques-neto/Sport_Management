@@ -33,5 +33,11 @@
       "observacao": "é bom",
       "id": 3
     }
+  ],
+  "times": [
+    {
+      "name": "klkoko",
+      "id": 10
+    }
   ]
 }

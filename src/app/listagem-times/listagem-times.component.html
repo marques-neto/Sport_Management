@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="head">
+
+
+    <div class="input-group mb-3">
+
+      <div class="input-group mb-3">
+        <input [(ngModel)]="userFilter.name" type="text" class="form-control" placeholder="Buscar Time..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+         
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger" routerLink="/cadastrar-time">Adicionar Time</button>
+    </div>
+
+
+
+    <div class="list-group">
+      <a style="background-color: black; font-weight: bold; border:none " href="#" class="list-group-item list-group-item-action active">
+        Times
+      </a>
+      <a style="color:black; font-weight: bold" *ngFor="let time of times | filterBy: userFilter"  class="list-group-item list-group-item-action">{{time.name}}
+        <button (click)="deleteTime(time.id)" style="background-color: red; float: right" class="btn btn-outline-secondary" type="button" id="button-addon2">
+          <i style="color: white" class="fas fa-trash-alt"></i>
+          <li *ngIf="(times | filterBy: userFilter).length === 0">Sem Resultados...</li>
+        </button>
+      </a>
+    </div>
+  </div>

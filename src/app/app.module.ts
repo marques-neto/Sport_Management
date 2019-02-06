@@ -1,8 +1,14 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ListagemTimesComponent } from './listagem-times/listagem-times.component';
+import { CadastroTimesComponent } from './cadastro-times/cadastro-times.component';
+import { FilterPipeModule } from 'ngx-filter-pipe';
+
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,7 +21,10 @@ import { ListaJogadorComponent } from './jogador/lista-jogador/lista-jogador.com
   declarations: [
     AppComponent,
     CadastroJogadorComponent,
-    ListaJogadorComponent
+    ListaJogadorComponent,
+    DashboardComponent,
+    ListagemTimesComponent,
+    CadastroTimesComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +32,7 @@ import { ListaJogadorComponent } from './jogador/lista-jogador/lista-jogador.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FilterPipeModule
   ],
   providers: [Service],
   bootstrap: [AppComponent]

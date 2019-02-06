@@ -1,2 +1,2 @@
-export const JOGADORES = 'jogadores'
-export const TIME = 'times'
+export const JOGADORES = 'jogadores';
+export const TIME = 'times';
