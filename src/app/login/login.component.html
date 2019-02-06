@@ -2,7 +2,7 @@
 
   <div class="login-box">
 
-    <form [formGroup]="loginForm" (ngSubmit)="submit()" class="formGroup">
+    <form [formGroup]="login" (ngSubmit)="submit()" class="formGroup">
       <div class="form-group">
         <input formControlName="email" type="text" class="form-control" placeholder="Email">
       </div>
@@ -10,7 +10,7 @@
       <div class="password-box">
         <input formControlName="password" type="password" class="form-control" placeholder="Senha">
       </div>
-      <button type="submit" class="btn" (click)= "LogOn()">Login</button>
+      <button type="submit" class="btn">Login</button>
 
     </form>
 
