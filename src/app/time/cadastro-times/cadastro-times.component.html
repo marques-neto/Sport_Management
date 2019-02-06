@@ -1,0 +1,28 @@
+<div class="container">
+
+  <div class="input-group mb-3">
+    <h2>
+      Cadastre seu time inserindo o nome abaixo:
+    </h2>
+
+    <div class="input-group mb-3">
+      <input [(ngModel)]="time.name"  type="text" class="form-control" placeholder="Time..." aria-label="Recipient's username" aria-describedby="button-addon2">
+    </div>
+    
+  </div>
+</div>
+
+<div style="justify-content: center; align-items: center; display: flex">
+    <div style="margin-right: 1%">
+      <button style="background-color: green; border: none" type="button" class="btn btn-danger"  (click)="cadastrarTime()">Salvar</button>
+    </div>
+    <div style="margin-left: 1%">
+      <button style="background-color: black; border: none" type="button" class="btn btn-danger" routerLink="/listar-time">Ver Lista de Times</button>
+    </div>
+    <div style="margin-left: 1%">
+      <button style="background-color: black; border: none" type="button" class="btn btn-danger" routerLink="/listar-jogadores">Ver Lista de Jogadores</button>
+    </div>
+    <div style="margin-left: 1%">
+        <button style="background-color: black; border: none" type="button" class="btn btn-danger" routerLink="/cadastrar-jogador">Cadastrar Jogador</button>
+      </div>
+  </div>

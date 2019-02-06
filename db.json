@@ -32,12 +32,31 @@
       "endereco": "Rua Maurílio Silva Santos",
       "observacao": "é bom",
       "id": 3
+    },
+    {
+      "nome": "Joao Silva",
+      "nascimento": "223364545",
+      "mae": "Maria",
+      "pai": "Joao Pai",
+      "rg": "333332244",
+      "time": "Treze",
+      "endereco": "Rua Maurílio Silva Santos",
+      "observacao": "Qualqurer",
+      "id": 4
     }
   ],
   "times": [
     {
       "name": "klkoko",
       "id": 10
+    },
+    {
+      "name": "Treze",
+      "id": 11
+    },
+    {
+      "name": "Campinense",
+      "id": 12
     }
   ]
 }

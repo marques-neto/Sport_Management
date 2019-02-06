@@ -1,6 +1,8 @@
-import { TIME } from './../../environments/endpoints';
-import { RequestService } from './../services/request.service';
+
 import { Component, OnInit } from '@angular/core';
+import { Service } from '../../generic.service';
+import { TIME } from '../../../environments/endpoints';
+
 
 @Component({
   selector: 'app-cadastro-times',
@@ -10,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class CadastroTimesComponent implements OnInit {
   time: any = { name: '' };
 
-  constructor(private request : RequestService) { }
+  constructor(private request : Service) { }
 
   ngOnInit() {
   }

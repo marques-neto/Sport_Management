@@ -1,48 +1,51 @@
 <div class="container">
   <div class="jumbotron">
 
-    <div class="form-model">
+    <div class="form-group">
 
       <form action="" [formGroup]="jogadorForm">
-        <div class="form-control">
-          
-          <input placeholder="Nome" type="text" formControlName="nome">
+        <div>
+          <input class="form-control" placeholder="Nome" type="text" formControlName="nome">
         </div>
 
-        <div class="form-control">
-          <input placeholder="Data de Nascimento" type="text" formControlName="nascimento">
+        <div>
+          <input class="form-control" placeholder="Data de Nascimento" type="text" formControlName="nascimento">
+        </div>
 
+        <div>
+          <input class="form-control" placeholder="Nome da Mãe" type="text" formControlName="mae">
         </div>
-        
-        <div class="form-control">
-          <input placeholder="Nome da Mãe" type="text" formControlName="mae">
 
+        <div>
+          <input class="form-control" placeholder="Nome do Pai" type="text" formControlName="pai">
         </div>
-        <div class="form-control">
 
-          <input placeholder="Nome do Pai" type="text" formControlName="pai">
+        <div>
+          <input class="form-control" placeholder="RG" type="text" formControlName="rg">
         </div>
-        <div class="form-control">
-          
-          <input placeholder="RG" type="text" formControlName="rg">
-        </div>
-        <div class="form-control">
-          
-          <input placeholder="Time" type="text" formControlName="time">
-        </div>
-        <div class="form-control">
 
-          <input placeholder="Endereço" type="text" formControlName="endereco">
+        <div>
+          <input class="form-control" placeholder="Time" type="text" formControlName="time">
         </div>
-        <div class="form-control">
 
-          <input placeholder="Observação" type="text" formControlName="observacao">
+        <div>
+          <input class="form-control" placeholder="Endereço" type="text" formControlName="endereco">
         </div>
-        <button type="button" (click)="cadastraJogador()">Cadastrar</button>
+
+        <div>
+          <input class="form-control" placeholder="Observação" type="text" formControlName="observacao">
+        </div>
+
+        <div>
+          <button type="button" (click)="cadastraJogador()">Cadastrar</button>
+          <div style="margin-left: 1%">
+            <button style="background-color: black; border: none" type="button" class="btn btn-danger" routerLink="">Voltar</button>
+          </div>
+        </div>
       </form>
     </div>
 
-    <div>
+    <!-- <div>
       <div>
         {{jogador | json}}
       </div>
@@ -53,6 +56,6 @@
       </form>
     </div>
 
-    <app-lista-jogador></app-lista-jogador>
+    <app-lista-jogador></app-lista-jogador> -->
   </div>
 </div>
