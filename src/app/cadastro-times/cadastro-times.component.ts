@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-times.component.css']
 })
 export class CadastroTimesComponent implements OnInit {
-  time: any = { name: '' };
+  time: any = { nome: '' };
 
   constructor(private request : RequestService) { }
 

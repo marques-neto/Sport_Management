@@ -5,7 +5,7 @@
     <div class="input-group mb-3">
 
       <div class="input-group mb-3">
-        <input [(ngModel)]="userFilter.name" type="text" class="form-control" placeholder="Buscar Time..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input [(ngModel)]="userFilter.nome" type="text" class="form-control" placeholder="Digite o nome do time..." aria-label="Recipient's username" aria-describedby="button-addon2">
         <div class="input-group-append">
          
         </div>
@@ -19,11 +19,17 @@
       <a style="background-color: black; font-weight: bold; border:none " href="#" class="list-group-item list-group-item-action active">
         Times
       </a>
-      <a style="color:black; font-weight: bold" *ngFor="let time of times | filterBy: userFilter"  class="list-group-item list-group-item-action">{{time.name}}
+      <a style="color:black; font-weight: bold" *ngFor="let time of times | filterBy: userFilter"  class="list-group-item list-group-item-action">{{time.nome}}
         <button (click)="deleteTime(time.id)" style="background-color: red; float: right" class="btn btn-outline-secondary" type="button" id="button-addon2">
+          
           <i style="color: white" class="fas fa-trash-alt"></i>
-          <li *ngIf="(times | filterBy: userFilter).length === 0">Sem Resultados...</li>
+
+          
+        </button>
+        <button routerLink="/listar-jogador" style="background-color: green; float: right; margin-right: 1%" class="btn btn-outline-secondary" type="button" id="button-addon2">
+          <i style="color: white" class="far fa-arrow-alt-circle-right"></i>
         </button>
       </a>
+      
     </div>
   </div>

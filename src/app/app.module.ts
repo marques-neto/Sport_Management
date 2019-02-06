@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListagemTimesComponent } from './listagem-times/listagem-times.component';
 import { CadastroTimesComponent } from './cadastro-times/cadastro-times.component';
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import { ListagemJogadoresComponent } from './listagem-jogadores/listagem-jogadores.component';
+import { CadastroJogadoresComponent } from './cadastro-jogadores/cadastro-jogadores.component';
+
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     AppComponent,
     DashboardComponent,
     ListagemTimesComponent,
-    CadastroTimesComponent
+    CadastroTimesComponent,
+    ListagemJogadoresComponent,
+    CadastroJogadoresComponent,
+
   ],
   imports: [
     BrowserModule,

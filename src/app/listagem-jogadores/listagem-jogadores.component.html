@@ -1,0 +1,65 @@
+
+<div class="container">
+  <div class="head">
+
+
+    <div class="input-group mb-3">
+
+      <div class="input-group mb-3">
+        <input [(ngModel)]="userFilter.nome" type="text" class="form-control" placeholder="Digite o nome do jogador..." aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+         
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger" routerLink="/cadastrar-jogador">Adicionar Jogador</button>
+    </div>
+
+
+
+    <div class="list-group">
+      <a style="background-color: black; font-weight: bold; border:none; color: white" class="list-group-item list-group-item-action active">
+        Jogadores
+      </a>
+      <a style="color:black; font-weight: bold" *ngFor="let jogador of jogadores | filterBy: userFilter"  class="list-group-item list-group-item-action">
+        {{jogador.nome}}
+        <button  style="background-color: red; float: right" class="btn btn-outline-secondary" type="button" id="button-addon2">
+          
+          <i style="color: white" class="fas fa-trash-alt"></i>
+
+          
+        </button>
+        <button data-toggle="modal" data-target="#modalJogador" style="background-color: green; float: right; margin-right: 1%" class="btn btn-outline-secondary" type="button" id="button-addon2">
+          <i style="color: white" class="far fa-arrow-alt-circle-right"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- modal -->
+
+  <div class="modal fade" id="modalJogador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Detalhes do jogador</h5>
+            
+          </div>
+          <div class="modal-body">
+              <ul class="list-group">
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Nome : </span>Neto</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Nascimento : </span>15/04/1997</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Rg : </span>3611328</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Pai : </span>francinaldo</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Mãe : </span>adriana</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Endereço : </span>josé bonifácio</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Time : </span>barcelona</li>
+                  <li class="list-group-item"><span style="color: black; font-weight: bold">Observação : </span>lesionado</li>
+                </ul>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+          </div>
+        </div>
+      </div>
+    </div>

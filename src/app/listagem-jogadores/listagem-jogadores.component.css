@@ -1,0 +1,11 @@
+.container{
+    margin-top: 2%;
+}
+.head{
+    margin-bottom: 2%;
+}
+.btn{
+    background-color: black;
+    font-weight: bold;
+    border: none
+}

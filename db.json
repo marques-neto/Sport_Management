@@ -1,8 +1,43 @@
 {
   "times": [
     {
-      "name": "klkoko",
-      "id": 10
+      "nome": "teste2",
+      "id": 2
+    },
+    {
+      "nome": "teste2q",
+      "id": 3
+    },
+    {
+      "nome": "teste2qqqw",
+      "id": 4
+    }
+  ],
+  "jogadores":[
+    {
+      "id": 1,
+      "nome": "neto",
+      "nascimento": "15/04/1997",
+      "rg": "3611328",
+      "pai": "francinaldo",
+      "mae": "adriana",
+      "endereco": "josé bonifacio",
+      "time": "barcelona",
+      "observacao": "lesionado"
+
+    },
+    {
+      "id": 1,
+      "nome": "teste",
+      "nascimento": "15/04/1997",
+      "rg": "3611328",
+      "pai": "francinaldo",
+      "mae": "adriana",
+      "endereco": "josé bonifacio",
+      "time": "barcelona",
+      "observacao": "lesionado"
+
     }
   ]
+ 
 }

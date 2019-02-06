@@ -12,7 +12,7 @@ import {TIME} from '../../environments/endpoints';
 })
 export class ListagemTimesComponent implements OnInit {
   times : Array<any>
-  userFilter: any = {name: ''}
+  userFilter: any = {nome: ''}
 
   constructor(private request : RequestService) { }
 
@@ -26,9 +26,7 @@ export class ListagemTimesComponent implements OnInit {
     })
   }
 
-  addTime(){
-    
-  }
+ 
 
   deleteTime(id){
     console.log(id)
