@@ -1,0 +1,13 @@
+<form (ngSubmit)="createUser()" class="flex"> 
+  <div class="item-flex">
+    <div class="register-box">
+      <p>C A D A S T R O</p>
+      <input type="text" placeholder="login" [(ngModel)]="newUser.email" name="email">
+      <input type="password" placeholder="Senha" [(ngModel)]="newUser.senha" name="senha">
+      <button class="btn btn-primary btn-block" submit >Cadastro</button>
+    </div>  
+    <nav>
+      <a routerLink="/login"> Voltar</a>
+    </nav>
+  </div>
+</form>

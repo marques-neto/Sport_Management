@@ -1,0 +1,13 @@
+<form (ngSubmit)="login()" class="flex"> 
+    <div class="item-flex">
+      <div class="jumbotron">
+        <p>L O G I N</p>
+        <input type="text" placeholder="login" [(ngModel)]="newUser.email" name="email">
+        <input type="password" placeholder="Senha" [(ngModel)]="newUser.senha" name="senha">
+        <button class="btn btn-primary btn-block" submit >Login</button>
+      </div>  
+      <nav>
+          <a routerLink= "/cadastro">cadastro</a>
+      </nav>
+    </div>
+  </form>

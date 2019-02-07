@@ -3,7 +3,11 @@
     {
       "id": 1,
       "email": "araujor920@gmail.com",
-      "author": "xxxxxxxxxx"
+      "senha": "xxxxxxxxxx"
+    },{
+      "id":2,
+      "email": "adm@adm",
+      "senha" : "123"
     }
   ]
 }
