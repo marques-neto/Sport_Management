@@ -7,7 +7,7 @@ import { CadastroJogadoresComponent } from './cadastro-jogadores/cadastro-jogado
 import { ListagemJogadoresComponent } from './listagem-jogadores/listagem-jogadores.component';
 
 const routes: Routes = [
-  
+  {path:'', redirectTo:'/dashboard', pathMatch:'full'},
   {path:'dashboard', component: DashboardComponent},
   {path: 'listar-time', component: ListagemTimesComponent},
   {path:'cadastrar-time', component: CadastroTimesComponent},

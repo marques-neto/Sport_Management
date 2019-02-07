@@ -1,19 +1,19 @@
 {
   "times": [
     {
-      "nome": "teste2",
-      "id": 2
+      "nome": "barcelona",
+      "id": 6
     },
     {
-      "nome": "teste2q",
-      "id": 3
+      "nome": "teste",
+      "id": 7
     },
     {
-      "nome": "teste2qqqw",
-      "id": 4
+      "nome": "teste 4",
+      "id": 8
     }
   ],
-  "jogadores":[
+  "jogadores": [
     {
       "id": 1,
       "nome": "neto",
@@ -24,7 +24,6 @@
       "endereco": "josé bonifacio",
       "time": "barcelona",
       "observacao": "lesionado"
-
     },
     {
       "id": 1,
@@ -36,8 +35,6 @@
       "endereco": "josé bonifacio",
       "time": "barcelona",
       "observacao": "lesionado"
-
     }
   ]
- 
 }

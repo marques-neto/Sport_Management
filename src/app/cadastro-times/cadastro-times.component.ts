@@ -1,6 +1,7 @@
 import { TIME } from './../../environments/endpoints';
 import { RequestService } from './../services/request.service';
 import { Component, OnInit } from '@angular/core';
+import { Time } from '../models/time';
 
 @Component({
   selector: 'app-cadastro-times',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-times.component.css']
 })
 export class CadastroTimesComponent implements OnInit {
-  time: any = { nome: '' };
+  time : Time = new Time()
 
   constructor(private request : RequestService) { }
 
@@ -16,10 +17,8 @@ export class CadastroTimesComponent implements OnInit {
   }
 
   cadastrarTime(){
-
     this.request.post(TIME,this.time
     ).subscribe(data => {})
-    
     alert('Salvo com sucesso !')
   }
 
