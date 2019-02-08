@@ -20,7 +20,8 @@ import { ListagemTimesComponent } from './time/listagem-times/listagem-times.com
     ListaJogadorComponent,
     DashboardComponent,
     ListagemTimesComponent,
-    CadastroTimesComponent
+    CadastroTimesComponent,
+
   ],
   imports: [
     BrowserModule,

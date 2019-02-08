@@ -31,4 +31,11 @@ export class ListaJogadorComponent implements OnInit {
   consulta(index){
     this.jogadorSelecionado = this.listaJogadores[index]
   }
+
+  delete(index){
+    this.jogadorSelecionado = this.listaJogadores[index]
+    this.service.exclui(this.jogadorSelecionado.id).subscribe(
+      () => this.consultaJogadores()
+    );
+  }
 }

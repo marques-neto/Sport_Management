@@ -9,7 +9,8 @@ import { CadastroTimesComponent } from './time/cadastro-times/cadastro-times.com
 
 const routes: Routes = [
   
-  {path:'', component: DashboardComponent},
+  {path:'', redirectTo:'app-dashboard', pathMatch:'full'},
+  {path: 'app-dashboard', component: DashboardComponent},
   {path: 'listar-time', component: ListagemTimesComponent},
   {path:'cadastrar-time', component: CadastroTimesComponent},
   {path: 'cadastrar-jogador', component: CadastroJogadorComponent},
